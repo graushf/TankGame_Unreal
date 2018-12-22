@@ -29,6 +29,9 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Crosshair Setup")
 	float CrosshairYLocation = 0.3333;
 
+	UPROPERTY(EditAnywhere)
+	float LineTraceRange = 1000000;
+
 	ATank* GetControlledTank() const;
 
 	// Start the  tank moving the barrel so that a shot would hit where
@@ -38,4 +41,5 @@ private:
 	// Return an OUT parameter, true if hit landscape
 	bool GetSightRayHitLocation(FVector& HitLocation) const;
 	bool GetLookDirection(FVector2D ScreenLocation, FVector& LookDirection) const;
+	bool GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation) const;
 };

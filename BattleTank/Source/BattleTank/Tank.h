@@ -38,6 +38,10 @@ public:
 	
 	void AimAt(FVector HitLocation);
 
+	UFUNCTION(BlueprintCallable, Category = "Firing")
+	void Fire();
+
+
 private:
 	UPROPERTY(EditAnywhere, Category = "Firing")
 	float LaunchSpeed = 4000.0; // TODO find sensible default
